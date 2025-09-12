@@ -2,54 +2,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --vinho: #8B0000;
+    --vinho: #E0001A; /* Cor mais vibrante */
+    --roxo-vibrante: #6A0DAD; /* Roxo vibrante */
+    --azul-turquesa: #30D5C8; /* Azul turquesa */
+    --laranja-energetico: #FF8C00; /* Laranja energético */
     --alto-contraste-fundo: #000000;
     --alto-contraste-texto: #ffffff;
-    --alto-contraste-link: #db687b;
+    --alto-contraste-link: #FF1493; /* Rosa neon */
 }
 
 body {
     font-size: 1rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F7F7F7; /* Cor de fundo suave */
 }
 
 header {
     background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves para destacar */
 }
-
 
 section {
     padding-bottom: 5rem;
 }
 
-
 .nav-link {
-    color: #ff0606;
+    color: var(--roxo-vibrante);
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .inicio-fundo {
-    /* aula 3 */
     background-image: url('4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
     background-size: cover;
-    background-position: right;
+    background-position: center;
     border-radius: 80px;
     width: 100%;
     height: 606px;
     padding: 40px;
     margin: 0 auto;
+    transition: all 0.3s ease;
 }
 
-/* posicionamento para a imagem à direita */
+.inicio-fundo:hover {
+    filter: brightness(80%);
+}
+
 .img-inicio {
     position: absolute;
     right: 0;
     top: 18rem;
     width: 45rem;
     height: auto;
+    border-radius: 20px;
 }
-
 
 .esquerda-conteudo {
     display: flex;
@@ -58,21 +64,28 @@ section {
     gap: 1rem;
 }
 
-
 .botao-inicio {
     background-color: var(--vinho);
     border-radius: 30px;
     border: none;
     width: 14em;
     height: 3em;
-    align-content: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.botao-inicio:hover {
+    background-color: var(--azul-turquesa);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .display-4 {
     text-shadow: -5px 5px var(--vinho);
 }
-
 
 #tropicalia {
     position: relative;
@@ -82,7 +95,8 @@ section {
     background: url('flor.png') top right no-repeat,
         url('flor-esquerda.png') bottom left no-repeat;
     background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
+    background-color: var(--azul-turquesa);
+    color: white;
 }
 
 #tropicalia .container {
@@ -91,101 +105,120 @@ section {
     justify-content: center;
     position: relative;
     z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
 }
-
 
 h2 {
     font-family: 'Lemon', serif;
     font-size: 2.5em;
     font-style: normal;
-    color: var(--vinho);
+    color: var(--roxo-vibrante);
+    text-shadow: 2px 2px var(--laranja-energetico);
 }
 
 #galeria {
-    background-color: #FAF4F4;
-
+    background-color: #FFE5B4; /* Tom suave de bege para dar um contraste */
 }
 
 .fundo-galeria {
     background: url('flor-bottom-direita.png') bottom right no-repeat;
     background-size: 180px 180px;
+    background-color: var(--azul-turquesa);
 }
 
 #contato {
     background-image: url('4965007.jpg');
     background-size: cover;
     padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
+    color: white;
 }
 
 .formulario {
     background-color: #ffffff;
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
-    /* Borda arredondada para o formulário */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
     font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.formulario:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .formulario button {
-    background-color: #CB6D43;
+    background-color: var(--laranja-energetico);
     border: none;
     font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: var(--roxo-vibrante);
 }
 
 .form-control {
     background-color: #F1EDEF;
 }
-.menu-acessibilidade{
+
+.menu-acessibilidade {
     position: fixed;
-    top:2rem;
-    right:20px;
+    top: 2rem;
+    right: 20px;
     z-index: 1000;
 }
 
-.rotacao-botao{
+.rotacao-botao {
     transform: rotate(-90deg);
     transform-origin: right center;
 }
 
-.opcoes-acessibilidade{
-    margin-top:10px;
+.opcoes-acessibilidade {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.opcoes-acessibilidade button{
+.opcoes-acessibilidade button {
     margin-bottom: 5px;
+    background-color: var(--vinho);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.apresenta-lista{
+
+.opcoes-acessibilidade button:hover {
+    background-color: var(--azul-turquesa);
+}
+
+.apresenta-lista {
     display: none;
 }
 
-.alto-contraste{
+.alto-contraste {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
 }
 
 .alto-contraste header,
 .alto-contraste footer,
-.alto-contraste .formulario{
+.alto-contraste .formulario {
     background-color: var(--alto-contraste-fundo);
     color: var(--alto-contraste-texto);
 }
 
-.alto-contraste .nav-link{
+.alto-contraste .nav-link {
     color: var(--alto-contraste-link);
 }
 
 .alto-contraste .botao-inicio,
 .alto-contraste .formulario button,
-.alto-contraste .btn-primary{
+.alto-contraste .btn-primary {
     background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo)
+    color: var(--alto-contraste-fundo);
 }
 
 .alto-contraste #tropicalia {
@@ -195,6 +228,8 @@ h2 {
 .alto-contraste #galeria {
     background-color: var(--alto-contraste-fundo);
 }
+
 .alto-contraste .fundo-galeria {
     background: none;
 }
+
