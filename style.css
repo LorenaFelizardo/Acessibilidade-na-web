@@ -1,84 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
 :root {
-    --vermelho-vivo: #E0001A;      /* Vermelho principal bem vibrante */
-    --vermelho-escuro: #B30000;    /* Vermelho bordô para contrastes */
-    --rosa-forte: #FF3366;         /* Tom complementar vibrante */
-    --laranja-vivo: #FF5722;       /* Laranja avermelhado energético */
+    --vinho: #E0001A; /* Vermelho vibrante */
+    --vermelho-escuro: #B00014; /* Tom mais fechado */
+    --laranja-energetico: #FF4C00; /* Laranja mais vivo */
+    --amarelo-destaque: #FFD700; /* Amarelo dourado */
     --alto-contraste-fundo: #000000;
     --alto-contraste-texto: #ffffff;
-    --alto-contraste-link: #FFD700; /* Amarelo ouro para contraste */
+    --alto-contraste-link: #FF1493; /* Rosa neon */
 }
 
 body {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, var(--vermelho-vivo), var(--vermelho-escuro));
+    /* Fundo em degradê vermelho vibrante */
+    background: linear-gradient(135deg, var(--vinho), var(--vermelho-escuro));
     color: #fff;
 }
 
-/* Header com vermelho escuro */
 header {
     background-color: var(--vermelho-escuro);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    color: #fff;
+}
+
+section {
+    padding-bottom: 5rem;
 }
 
 .nav-link {
-    color: var(--rosa-forte);
+    color: var(--amarelo-destaque);
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .inicio-fundo {
-    background: linear-gradient(135deg, var(--vermelho-vivo), var(--laranja-vivo));
+    background-image: url('4965007.jpg');
+    background-size: cover;
+    background-position: center;
     border-radius: 80px;
+    width: 100%;
+    height: 606px;
     padding: 40px;
     margin: 0 auto;
     transition: all 0.3s ease;
 }
+
 .inicio-fundo:hover {
-    filter: brightness(85%);
+    filter: brightness(80%);
+}
+
+.img-inicio {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    width: 45rem;
+    height: auto;
+    border-radius: 20px;
 }
 
 .botao-inicio {
-    background-color: var(--vermelho-escuro);
+    background-color: var(--laranja-energetico);
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
 .botao-inicio:hover {
-    background-color: var(--rosa-forte);
+    background-color: var(--amarelo-destaque);
+    color: var(--vermelho-escuro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Títulos */
-h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    color: #fff;
-    text-shadow: 2px 2px var(--vermelho-escuro);
+.display-4 {
+    text-shadow: -5px 5px var(--vermelho-escuro);
 }
 
-/* Seções */
+/* Seção Tropicália */
 #tropicalia {
-    background: var(--rosa-forte);
-    color: #fff;
-}
-#galeria {
-    background-color: var(--laranja-vivo);
-}
-.fundo-galeria {
-    background-color: var(--vermelho-vivo);
+    position: relative;
+    padding-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: var(--vinho);
+    color: white;
 }
 
+#tropicalia h2 {
+    color: var(--amarelo-destaque);
+    text-shadow: 2px 2px var(--laranja-energetico);
+}
+
+/* Galeria */
+#galeria {
+    background-color: var(--vermelho-escuro);
+    color: white;
+}
+
+/* Contato */
 #contato {
-    background: linear-gradient(135deg, var(--vermelho-vivo), var(--vermelho-escuro));
+    background: linear-gradient(135deg, var(--vermelho-escuro), var(--vinho));
+    padding: 4rem 0;
     color: white;
 }
 
 .formulario {
-    background-color: #fff;
-    color: #000;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    color: var(--vermelho-escuro);
+    transition: all 0.3s ease;
 }
 
-/* Footer */
-footer {
-    background-color: var(--vermelho-escuro);
-    color: #fff;
+.formulario button {
+    background-color: var(--laranja-energetico);
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: var(--vinho);
+}
+
+/* Acessibilidade */
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+    background-color: var(--vinho);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.opcoes-acessibilidade button:hover {
+    background-color: var(--laranja-energetico);
 }
 
