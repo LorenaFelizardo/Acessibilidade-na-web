@@ -49,22 +49,22 @@ a:hover {
 }
 
 .fundo-animado.inicio {
-  background-image: url(flor.png), url(flor-bottom-direita.png), url (flor-esquerda.png);
+  background-image: url('flor.png'), url('flor-bottom-direita.png'), url('flor-esquerda.png');
   background-position: 20% 10%, 80% 80%, 10% 70%;
 }
 
 .fundo-animado.tropicalia {
-  background-image: url(image\ \(1\).png), url('flor.png'), url( flor-bottom-direita.png);
+  background-image: url('image\ \(1\).png'), url('flor.png'), url('flor-bottom-direita.png');
   background-position: 15% 20%, 70% 10%, 80% 70%;
 }
 
 .fundo-animado.galeria {
-  background-image: url(flor-esquerda.png), url(flor-bottom-direita.png);
+  background-image: url('flor-esquerda.png'), url('flor-bottom-direita.png');
   background-position: 5% 80%, 90% 90%;
 }
 
 .fundo-animado.contato {
-  background-image: url(flor.png), url(flor-esquerda.png);
+  background-image: url('flor.png'), url('flor-esquerda.png');
   background-position: 30% 20%, 70% 60%;
 }
 
@@ -268,4 +268,3 @@ body.alto-contraste .form-control::placeholder {
     text-align: center;
   }
 }
-
