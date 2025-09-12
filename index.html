@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tropicália</title>
-  <meta name="description" content="Tropicália — um site sobre o movimento cultural brasileiro.">
 
   <!-- Fontes & Bootstrap -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,30 +13,6 @@
 
   <!-- CSS personalizado -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Pequeno estilo para o skip link (pode mover para styles.css) -->
-  <style>
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      width: auto;
-      height: auto;
-      padding: .5rem .75rem;
-      background: #000;
-      color: #fff;
-      z-index: 2000;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -65,11 +40,7 @@
           Acessibilidade
         </button>
 
-        <!-- inicialmente escondido para leitores de tela -->
-        <div id="opcoes-acessibilidade"
-             class="opcoes-acessibilidade apresenta-lista"
-             role="menu"
-             aria-hidden="true">
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista" role="menu" aria-hidden="true">
           <button id="aumentar-fonte" type="button" class="btn btn-primary fw-bold" role="menuitem" aria-label="Aumentar o tamanho da fonte">A+</button>
           <button id="diminuir-fonte" type="button" class="btn btn-primary fw-bold" role="menuitem" aria-label="Diminuir o tamanho da fonte">A-</button>
           <button id="alterna-contraste" type="button" class="btn btn-primary fw-bold" role="menuitem" aria-label="Alternar o contraste de cores">
@@ -84,21 +55,19 @@
   <main id="main-content" class="container my-5" role="main">
     <!-- Início -->
     <section id="inicio" class="my-5">
-      <!-- position-relative para conter a imagem absoluta -->
-      <div class="inicio-fundo position-relative d-flex justify-content-between align-items-center">
+      <div class="inicio-fundo position-relative d-flex justify-content-between align-items-center" style="background-image: url('4965007.jpg');">
         <div class="esquerda-conteudo">
           <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
           <img src="logo-2.png" class="mb-3" width="563" height="278" alt="Logo Tropicália estilizada" loading="lazy">
           <a href="#tropicalia" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
         </div>
-        <!-- atenção: se possível renomeie arquivos com espaços/parênteses para evitar problemas -->
-        <img src="lossy-page1-640px-Os_Mutantes.png" alt="Grupo musical Os Mutantes cantando no microfone" title="Os Mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
+        <img src="os-mutantes-1.png" alt="Grupo musical Os Mutantes cantando no microfone" title="Os Mutantes - CC0 Domínio Público / Acervo Arquivo Nacional" class="img-fluid img-inicio">
       </div>
     </section>
 
     <!-- Explicação -->
     <section id="tropicalia" class="my-5 pt-6 secao-tropicalia" tabindex="0" aria-label="Explicação sobre a Tropicália">
-      <div class="container d-flex align-items-center">
+      <div class="container d-flex align-items-center" style="background-image: url('flor.png'); background-repeat: no-repeat; background-position: top right;">
         <div class="col-4 d-flex justify-content-center">
           <img src="image-1.png" class="rounded-pill" width="273" height="331" alt="Imagem ilustrativa sobre a Tropicália" loading="lazy">
         </div>
@@ -117,7 +86,7 @@
     </section>
 
     <!-- Galeria -->
-    <section id="galeria" tabindex="0" aria-label="Galeria de imagens da Tropicália">
+    <section id="galeria" tabindex="0" aria-label="Galeria de imagens da Tropicália" style="background-image: url('flor-bottom-direita.png'); background-repeat: no-repeat; background-position: bottom right;">
       <h2 class="text-center pt-5">Galeria</h2>
       <div class="container p-3 mt-3 fundo-galeria">
         <div class="row justify-content-md-center">
@@ -177,16 +146,7 @@
     <p class="mt-3">Desenvolvido por <strong>Lorena Felizardo Gomes</strong>, aluna da Alura.</p>
   </footer>
 
-  <!-- Aviso caso JS esteja desativado -->
-  <noscript>
-    <div style="background:#ffdddd;color:#800; padding: 1rem; text-align:center;">
-      Para melhor experiência, ative o JavaScript no seu navegador.
-    </div>
-  </noscript>
-
-  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
