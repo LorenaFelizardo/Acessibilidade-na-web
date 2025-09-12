@@ -5,18 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const aumentaFonteBotao = document.getElementById('aumentar-fonte');
   const diminuiFonteBotao = document.getElementById('diminuir-fonte');
   const alternaContraste = document.getElementById('alterna-contraste');
+  const opcoesBotao = opcoesDeAcessibilidade.querySelectorAll('button');
 
   // Estado inicial
   let tamanhoAtualFonte = 1;
 
   // === Acessibilidade ===
   botaoDeAcessibilidade.addEventListener('click', () => {
+    const menuAberto = !opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
     botaoDeAcessibilidade.classList.toggle('rotacao-botao');
-    opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
 
-    // Atualiza aria-expanded
-    const expandido = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
-    botaoDeAcessibilidade.setAttribute('aria-expanded', String(!expandido));
+    // Atualiza aria-expanded e aria-hidden
+    botaoDeAcessibilidade.setAttribute('aria-expanded', String(!menuAberto));
+    opcoesDeAcessibilidade.setAttribute('aria-hidden', String(menuAberto));
+
+    // Controla tabIndex dos botões internos
+    opcoesBotao.forEach(btn => {
+      btn.tabIndex = menuAberto ? -1 : 0;
+    });
   });
 
   // === Controle de fonte ===
@@ -34,7 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // === Animações com ScrollReveal ===
-  const sr = ScrollReveal({ delay: 500, distance: '50px', duration: 800, easing: 'ease-in-out' });
+  const sr = ScrollReveal({
+    delay: 500,
+    distance: '50px',
+    duration: 800,
+    easing: 'ease-in-out'
+  });
 
   sr.reveal('#inicio');
   sr.reveal('#tropicalia');
