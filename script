@@ -53,3 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
   sr.reveal('#galeria');
   sr.reveal('#contato');
 });
+
