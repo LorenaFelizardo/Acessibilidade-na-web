@@ -54,7 +54,7 @@ a:hover {
 }
 
 .fundo-animado.tropicalia {
-  background-image: url('image-1.png'), url('flor.png'), url('flor-bottom-direita.png');
+  background-image: url('image (1).png'), url('flor.png'), url('flor-bottom-direita.png');
   background-position: 15% 20%, 70% 10%, 80% 70%;
 }
 
@@ -113,13 +113,11 @@ a:hover {
   padding: 12px 24px;
   border-radius: 30px;
   font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  transition: 0.3s;
 }
 
 .botao-inicio:hover {
   background: #c0392b;
-  transform: scale(1.05);
 }
 
 /* =============================
@@ -130,7 +128,7 @@ a:hover {
   padding: 60px 0;
   background: linear-gradient(135deg, #ffc1cc, #db7093, #800000);
   border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* =============================
@@ -147,12 +145,11 @@ a:hover {
 
 .img-fluid.rounded-5 {
   margin-bottom: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 
 .img-fluid.rounded-5:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 /* =============================
@@ -164,15 +161,13 @@ a:hover {
   padding: 40px;
   border-radius: 25px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .form-control {
   background-color: rgba(255,255,255,0.2);
   border: none;
   color: #fff;
-  padding: 10px;
-  border-radius: 8px;
 }
 
 .form-control::placeholder {
@@ -188,14 +183,11 @@ a:hover {
   border-color: #ff6b6b;
   transition: 0.3s;
   color: white;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 .btn-primary:hover {
   background-color: #ff4757;
   border-color: #ff4757;
-  transform: scale(1.05);
 }
 
 /* =============================
@@ -207,7 +199,6 @@ footer {
   padding: 20px 0;
   color: #fff;
   border-top: 1px solid rgba(255,255,255,0.2);
-  text-align: center;
 }
 
 footer a {
