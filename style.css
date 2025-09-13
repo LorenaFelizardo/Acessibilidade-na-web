@@ -54,7 +54,7 @@ a:hover {
 }
 
 .fundo-animado.tropicalia {
-  background-image: url('image (1).png'), url('flor.png'), url('flor-bottom-direita.png');
+  background-image: url('image\ \(1\).png'), url('flor.png'), url('flor-bottom-direita.png');
   background-position: 15% 20%, 70% 10%, 80% 70%;
 }
 
